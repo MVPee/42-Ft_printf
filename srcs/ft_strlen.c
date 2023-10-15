@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c.c                                                :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 13:37:26 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/10/15 13:42:07 by mvan-pee         ###   ########.fr       */
+/*   Created: 2023/09/19 18:39:48 by mvpee             #+#    #+#             */
+/*   Updated: 2023/10/15 17:02:34 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int main()
+size_t	ft_strlen(const char *str)
 {
-    ft_printf("Jadore %s les no%%rma%5neds %p");
-    return 0;
+	int	i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
