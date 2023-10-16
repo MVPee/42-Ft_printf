@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@19.be>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:12:15 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/10/15 18:02:52 by mvpee            ###   ########.fr       */
+/*   Updated: 2023/10/16 10:26:50 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ int	ft_is_for_printf(char a)
 
 void	ft_checkflag(va_list args, char a, int *len)
 {
+	int unsigned_num;
+
 	if (a == 'c')
 		*len += ft_putchar_fd_l(va_arg(args, int), 1);
 	else if (a == 's')
@@ -31,7 +33,12 @@ void	ft_checkflag(va_list args, char a, int *len)
 	else if (a == 'd' || a == 'i')
 		*len += ft_putnbr_fd_l(va_arg(args, int), 1);
 	else if (a == 'u')
-		*len += ft_u_putnbr_fd_l(va_arg(args, int), 1);
+	{
+		unsigned_num = va_arg(args, int);
+		if(unsigned_num < 0)
+			unsigned_num *= -1;
+		*len += ft_putnbr_fd_l(unsigned_num, 1);
+	}
 	else if (a == 'x' || a == 'X')
 		*len += ft_hexadecimal(va_arg(args, int), a);
 	else if (a == '%')

@@ -6,7 +6,6 @@ SRC =	ft_printf.c \
 		srcs/ft_putchar_fd_l.c \
 		srcs/ft_putstr_fd_l.c \
 		srcs/ft_putnbr_fd_l.c \
-		srcs/ft_u_putnbr_fd_l.c \
 		srcs/ft_hexadecimal.c \
 		srcs/ft_strlcpy.c \
 		srcs/ft_strlen.c \
