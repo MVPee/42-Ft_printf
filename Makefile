@@ -1,4 +1,4 @@
-NAME = libftprint.a
+NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
@@ -10,7 +10,7 @@ SRC =	ft_printf.c \
 		srcs/ft_strlcpy.c \
 		srcs/ft_strlen.c \
 		srcs/ft_pointer.c \
-		srcs/ft_int_len.c 
+		srcs/ft_u_putnbr_fd_l.c
 
 OBJ = $(SRC:.c=.o)
 

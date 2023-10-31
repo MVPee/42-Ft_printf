@@ -19,7 +19,7 @@ int	ft_putstr_fd_l(char *s, int fd)
 
 	len = 0;
 	if (!s)
-		return (len);
+		return (ft_putstr_fd_l("(null)", fd));
 	i = -1;
 	while (s[++i])
 		len += ft_putchar_fd_l(s[i], fd);

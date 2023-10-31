@@ -12,16 +12,34 @@
 
 #include "../includes/ft_printf.h"
 
+int	ft_int_len(int n)
+{
+	int	len;
+
+	len = 1;
+	if (n < 0)
+	{
+		len++;
+		n *= -1;
+	}
+	while (n > 9)
+	{
+		len++;
+		n /= 10;
+	}
+	return (len);
+}
+
 int	ft_putnbr_fd_l(int n, int fd)
 {
 	int	len;
 
-	len = ft_int_len(n);
 	if (n == -2147483648)
 	{
 		ft_putstr_fd_l("-2147483648", fd);
-		return (len);
+		return (11);
 	}
+	len = ft_int_len(n);
 	if (n < 0)
 	{
 		ft_putchar_fd_l('-', fd);
