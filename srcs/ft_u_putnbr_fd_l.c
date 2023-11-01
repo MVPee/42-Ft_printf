@@ -6,7 +6,7 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:40:50 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/10/31 17:22:18 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/01 09:18:42 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,13 @@ int	ft_u_int_len(unsigned int a)
 	return (len);
 }
 
-int	ft_u_putnbr_fd_l(int n, int fd)
+int	ft_u_putnbr_fd_l(unsigned int n, int fd)
 {
 	int				len;
-	unsigned int	a;
 
-	if (n < 0)
-		a = (UINT_MAX + n) + 1;
-	else
-		a = n;
-	len = ft_u_int_len(a);
-	if (a >= 10)
-		ft_putnbr_fd_l(a / 10, fd);
-	ft_putchar_fd_l(a % 10 + '0', fd);
+	len = ft_u_int_len(n);
+	if (n >= 10)
+		ft_putnbr_fd_l(n / 10, fd);
+	ft_putchar_fd_l(n % 10 + '0', fd);
 	return (len);
 }
