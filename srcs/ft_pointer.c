@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_hexadecimal.c                                   :+:      :+:    :+:   */
+/*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/15 16:49:34 by mvpee             #+#    #+#             */
-/*   Updated: 2023/11/03 17:26:44 by mvan-pee         ###   ########.fr       */
+/*   Created: 2023/10/15 17:14:13 by mvpee             #+#    #+#             */
+/*   Updated: 2023/10/15 18:05:10 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
 
-int	ft_hexadecimal(unsigned int x, char a)
+int	ft_pointer(size_t x)
 {
 	char	base[17];
 	char	string[25];
 	int		i;
 	int		len;
 
-	len = 0;
 	i = 0;
-	if (a == 'X')
-		ft_strlcpy(base, "0123456789ABCDEF", sizeof(base));
-	else
-		ft_strlcpy(base, "0123456789abcdef", sizeof(base));
+	ft_strlcpy(base, "0123456789abcdef", sizeof(base));
+	ft_putstr_fd_l("0x", 1);
+	len = 2;
 	if (x == 0)
 	{
 		len += ft_putchar_fd_l('0', 1);
@@ -37,6 +35,8 @@ int	ft_hexadecimal(unsigned int x, char a)
 		i++;
 	}
 	while (i--)
+	{
 		len += ft_putchar_fd_l(string[i], 1);
+	}
 	return (len);
 }

@@ -1,30 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_u_putnbr_fd_l.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/30 19:38:28 by mvpee             #+#    #+#             */
-/*   Updated: 2023/11/03 16:57:53 by mvan-pee         ###   ########.fr       */
+/*   Created: 2023/10/31 14:40:50 by mvan-pee          #+#    #+#             */
+/*   Updated: 2023/10/31 17:22:18 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/ft_printf.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_u_int_len(unsigned int a)
 {
-	int		len;
-	t_list	*temp;
+	int	len;
 
-	temp = lst;
-	if (!temp)
-		return (0);
-	len = 0;
-	while (temp)
+	len = 1;
+	if (a < 0)
 	{
-		temp = temp->next;
 		len++;
+		a *= -1;
 	}
+	while (a > 9)
+	{
+		len++;
+		a /= 10;
+	}
+	return (len);
+}
+
+int	ft_u_putnbr_fd_l(int n, int fd)
+{
+	int				len;
+	unsigned int	a;
+
+	if (n < 0)
+		a = (UINT_MAX + n) + 1;
+	else
+		a = n;
+	len = ft_u_int_len(a);
+	if (a >= 10)
+		ft_putnbr_fd_l(a / 10, fd);
+	ft_putchar_fd_l(a % 10 + '0', fd);
 	return (len);
 }
