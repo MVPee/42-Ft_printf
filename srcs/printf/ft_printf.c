@@ -6,7 +6,7 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:12:15 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/03 17:22:07 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:33:50 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_checkflag(va_list args, char a, int *len)
 	else if (a == 's')
 		*len += ft_putstr_fd_l(va_arg(args, char *), 1);
 	else if (a == 'p')
-		*len += ft_pointer(va_arg(args, unsigned int));
+		*len += ft_pointer(va_arg(args, size_t));
 	else if (a == 'd' || a == 'i')
 		*len += ft_putnbr_fd_l(va_arg(args, int), 1);
 	else if (a == 'u')
