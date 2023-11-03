@@ -6,13 +6,13 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:40:50 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/01 09:18:42 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 16:44:57 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_u_int_len(unsigned int a)
+static int	ft_u_int_len(unsigned int a)
 {
 	int	len;
 
