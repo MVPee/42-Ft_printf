@@ -6,12 +6,11 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:14:13 by mvpee             #+#    #+#             */
-/*   Updated: 2023/11/03 17:15:09 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:26:50 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_pointer(size_t x)
 {
@@ -36,8 +35,6 @@ int	ft_pointer(size_t x)
 		i++;
 	}
 	while (i--)
-	{
 		len += ft_putchar_fd_l(string[i], 1);
-	}
 	return (len);
 }

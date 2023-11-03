@@ -6,7 +6,7 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 09:22:27 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/01 09:39:55 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:25:48 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 int	main(void)
 {
-	printf("%d \n", ft_printf("%x\n", -1));
-	printf("%d \n", printf("%x\n", -1));
+	printf("%d \n", ft_printf("%p\n", 1));
+	printf("%d \n", printf("%p\n", 1));
 }
