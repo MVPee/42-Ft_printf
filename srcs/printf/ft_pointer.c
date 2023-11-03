@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pointer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:14:13 by mvpee             #+#    #+#             */
-/*   Updated: 2023/10/15 18:05:10 by mvpee            ###   ########.fr       */
+/*   Updated: 2023/11/03 17:15:09 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_pointer(size_t x)
 {

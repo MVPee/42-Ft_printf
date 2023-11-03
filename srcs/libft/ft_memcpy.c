@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_u_putnbr_fd_l.c                                 :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 14:40:50 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/03 16:44:57 by mvan-pee         ###   ########.fr       */
+/*   Created: 2023/09/19 16:32:07 by mvpee             #+#    #+#             */
+/*   Updated: 2023/11/03 16:57:51 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-static int	ft_u_int_len(unsigned int a)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	len;
+	size_t		i;
+	char		*d;
+	const char	*s;
 
-	len = 1;
-	if (a < 0)
-	{
-		len++;
-		a *= -1;
-	}
-	while (a > 9)
-	{
-		len++;
-		a /= 10;
-	}
-	return (len);
-}
-
-int	ft_u_putnbr_fd_l(unsigned int n, int fd)
-{
-	int				len;
-
-	len = ft_u_int_len(n);
-	if (n >= 10)
-		ft_putnbr_fd_l(n / 10, fd);
-	ft_putchar_fd_l(n % 10 + '0', fd);
-	return (len);
+	d = dest;
+	s = src;
+	if (!dest && !src && n > 0)
+		return (NULL);
+	i = -1;
+	while (++i < n)
+		d[i] = s[i];
+	return (d);
 }

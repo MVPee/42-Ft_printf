@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/11 09:32:00 by mvpee             #+#    #+#             */
-/*   Updated: 2023/10/15 17:02:20 by mvpee            ###   ########.fr       */
+/*   Created: 2023/10/30 19:38:28 by mvpee             #+#    #+#             */
+/*   Updated: 2023/11/03 16:57:53 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
 	int		len;
+	t_list	*temp;
 
-	i = -1;
-	len = ft_strlen(src);
-	if (!size)
-		return (len);
-	while (++i < size - 1 && src[i])
-		dst[i] = src[i];
-	if (size > i)
-		dst[i] = 0;
+	temp = lst;
+	if (!temp)
+		return (0);
+	len = 0;
+	while (temp)
+	{
+		temp = temp->next;
+		len++;
+	}
 	return (len);
 }

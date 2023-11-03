@@ -6,11 +6,11 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:12:15 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/03 16:43:11 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:15:58 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_is_for_printf(char a)
 {
@@ -55,10 +55,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-		{
-			ft_putchar_fd_l(format[i], 1);
-			len++;
-		}
+			len += ft_putchar_fd_l(format[i], 1);
 		i++;
 	}
 	va_end(args);

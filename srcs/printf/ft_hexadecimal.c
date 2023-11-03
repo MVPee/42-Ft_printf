@@ -6,11 +6,11 @@
 /*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:49:34 by mvpee             #+#    #+#             */
-/*   Updated: 2023/11/01 09:21:22 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 17:19:10 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_hexadecimal(unsigned int x, char a)
 {

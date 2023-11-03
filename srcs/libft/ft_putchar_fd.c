@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/13 18:06:20 by mvpee             #+#    #+#             */
-/*   Updated: 2023/10/13 18:06:20 by mvpee            ###   ########.fr       */
+/*   Created: 2023/10/13 18:01:45 by mvpee             #+#    #+#             */
+/*   Updated: 2023/10/13 18:01:45 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
+#include "libft.h"
 
-int	ft_putstr_fd_l(char *s, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-	int	i;
-	int	len;
-
-	len = 0;
-	if (!s)
-		return (ft_putstr_fd_l("(null)", fd));
-	i = -1;
-	while (s[++i])
-		len += ft_putchar_fd_l(s[i], fd);
-	return (len);
+	if (fd < 0)
+		return ;
+	write(fd, &c, 1);
 }
