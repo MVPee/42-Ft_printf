@@ -6,7 +6,7 @@
 /*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 17:14:13 by mvpee             #+#    #+#             */
-/*   Updated: 2023/11/03 19:24:25 by mvpee            ###   ########.fr       */
+/*   Updated: 2023/11/03 21:01:00 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ int	ft_pointer(size_t x)
 		i++;
 	}
 	while (i--)
-	{
 		len += ft_putchar_fd_l(string[i], 1);
-	}
 	return (len);
 }
