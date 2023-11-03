@@ -1,21 +1,18 @@
-<<<<<<< HEAD
-=======
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 09:22:27 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/01 09:24:38 by mvan-pee         ###   ########.fr       */
+/*   Created: 2023/11/03 19:30:46 by mvpee             #+#    #+#             */
+/*   Updated: 2023/11/03 19:30:57 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
->>>>>>> parent of e583e2d (main)
 #include "includes/ft_printf.h"
 
-int main(void)
+int	main(void)
 {
 	printf("%d\n", ft_printf("%u\n", -1));
 	printf("%d\n", printf("%u\n", -1));

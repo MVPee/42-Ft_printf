@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:10:47 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/10/31 14:54:50 by mvan-pee         ###   ########.fr       */
+/*   Updated: 2023/11/03 19:27:41 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ size_t	ft_strlen(const char *str);
 int		ft_putchar_fd_l(char c, int fd);
 int		ft_putstr_fd_l(char *s, int fd);
 int		ft_putnbr_fd_l(int n, int fd);
-int		ft_u_putnbr_fd_l(int n, int fd);
-int		ft_hexadecimal(int x, char a);
+int		ft_u_putnbr_fd_l(unsigned int n, int fd);
+int		ft_hexadecimal(unsigned int x, char a);
 int		ft_pointer(size_t x);
 
 #endif

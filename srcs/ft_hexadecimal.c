@@ -6,13 +6,13 @@
 /*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 16:49:34 by mvpee             #+#    #+#             */
-/*   Updated: 2023/10/15 18:04:57 by mvpee            ###   ########.fr       */
+/*   Updated: 2023/11/03 19:24:00 by mvpee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int	ft_hexadecimal(int x, char a)
+int	ft_hexadecimal(unsigned int x, char a)
 {
 	char	base[17];
 	char	string[25];
