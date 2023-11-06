@@ -3,20 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvpee <mvpee@student.42.fr>                +#+  +:+       +#+        */
+/*   By: mvan-pee <mvan-pee@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 13:10:47 by mvan-pee          #+#    #+#             */
-/*   Updated: 2023/11/03 19:27:41 by mvpee            ###   ########.fr       */
+/*   Updated: 2023/11/06 14:04:18 by mvan-pee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <limits.h>
 # include <stdarg.h>
-# include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
 
 int		ft_printf(const char *format, ...);
