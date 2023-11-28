@@ -42,4 +42,6 @@ You can use this third party tester to fully test the project:
 
 * [Tripouille/printfTester](https://github.com/Tripouille/printfTester)
 
+![image](https://github.com/MVPee/42-Ft_printf/assets/93082514/a110bd5d-ddcb-4313-891f-7ae7b1be3f84)
+
 <i>Don't copy but learn</i>
